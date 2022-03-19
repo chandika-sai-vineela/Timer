@@ -1,0 +1,11 @@
+import time
+def count_time(t):
+    while(t):
+        min,sec=divmod(t,60)
+        time_count='{:02d}:{:02d}'.format(min,sec) 
+        print(time_count,end="\r")
+        time.sleep(1)
+        t-=1
+    print("Time is up!")
+t=int(input("enter number of seconds : "))
+count_time(t)
